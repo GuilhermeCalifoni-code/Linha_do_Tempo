@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="timeline">
+
+    <!-- Tela da Linha do Tempo -->
+    <section id="timeline-screen">
+        <h2>Nossa Linha do Tempo</h2>
+        <div id="timeline"></div>
+    </section>
+
+    <!-- Tela de Visualização dos Momentos -->
+    <section id="moment-screen" class="hidden">
+        <div class="moment">
+            <div class="moment-date" id="moment-date"></div>
+            <img id="moment-img" src="" alt="Foto do momento">
+            <div class="moment-text" id="moment-text"></div>
+            <div class="moment-controls">
+                <button onclick="prevMoment()">◀</button>
+                <button onclick="nextMoment()">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

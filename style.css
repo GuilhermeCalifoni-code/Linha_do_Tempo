@@ -1,0 +1,168 @@
+/* ==========================
+   🎨 Estilo Geral
+========================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+}
+
+/* ==========================
+   ❤️ Tela de Introdução
+========================== */
+.intro-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#heart-svg {
+    width: 200px;
+    fill: crimson;
+    animation: pulse 2s infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.btn {
+    padding: 15px 30px;
+    background: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e53950;
+}
+
+/* ==========================
+   ⌛ Linha do Tempo
+========================== */
+#timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.timeline-point {
+    background: #292929;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.timeline-point:hover {
+    background: #333;
+    transform: scale(1.02);
+}
+
+/* ==========================
+   📸 Tela dos Momentos
+========================== */
+.moment {
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.moment img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.moment-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.moment-text {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.moment-controls button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: crimson;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.moment-controls button:hover {
+    background: #e53950;
+}
+
+/* ==========================
+   💍 Tela Final
+========================== */
+#final-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.final-heart {
+    width: 150px;
+    fill: crimson;
+    animation: closeHeart 2s ease-in-out forwards;
+    margin-bottom: 20px;
+}
+
+#final-message {
+    font-size: 1.8rem;
+    color: #ffc0cb;
+    max-width: 90%;
+    text-align: center;
+    opacity: 0;
+    animation: appearText 3s forwards 2s;
+}
+
+/* ==========================
+   🎬 Animações
+========================== */
+@keyframes closeHeart {
+    0% { transform: scale(1.4); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes appearText {
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==========================
+   🔒 Utilitários
+========================== */
+.hidden {
+    display: none;
+}
